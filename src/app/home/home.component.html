@@ -1,0 +1,25 @@
+
+<div class="home-container">
+    <h1 style="font-weight: bold; font-size: 26px;">Quiz</h1>
+    
+    <p>Number of questions:</p>
+    <input class="input" min="5" max="10" type="number" [(ngModel)]="numberOfQuestions" placeholder="Enter number of questions" />
+
+    <p>Select category:</p>
+    <select class="input" [(ngModel)]="selectedCategory">
+    <option *ngFor="let item of categories" [value]="item">{{ item.name }}</option>
+    </select>
+
+    <p>Select difficulty:</p>
+    <select class="input" [(ngModel)]="selectedDifficulty">
+    <option *ngFor="let item of difficulties" [value]="item">{{ item }}</option>
+    </select>
+
+    <p>Select type:</p>
+    <select class="input" [(ngModel)]="selectedType">
+    <option *ngFor="let item of types" [value]="item">{{ item }}</option>
+    </select>
+
+    <button class="btn-main" (click)="StartQuiz()">Start quiz</button>
+
+</div>

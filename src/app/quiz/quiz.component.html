@@ -1,0 +1,15 @@
+<div class="question" *ngIf="global.Quiz && global.Quiz.length > 0">
+    <div class="top">
+    <h2 class="info">Question {{global.currentQuestionIndex + 1}} of {{global.Quiz.length}}</h2>
+    <h3 class="diff">{{global.Quiz[global.currentQuestionIndex].difficulty}} difficulty</h3>
+    </div>
+
+    <p style="font-size: 24px;">{{global.Quiz[global.currentQuestionIndex].question | decodeHtml}}</p>
+
+    <div class="answers">
+        <div *ngFor="let option of global.Quiz[global.currentQuestionIndex].incorrect_answers">
+            <button class="btn-main" (click)="submit(option)">{{option | decodeHtml}}</button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,11 @@
+.main-box{
+    width: 40%;
+    height: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 10px 10px 107px -23px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 107px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 107px -23px rgba(0,0,0,0.75);
+    margin-top: 40px;
+}
